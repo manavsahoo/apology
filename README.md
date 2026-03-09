@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I'm Sorry Zoya</title>
+
+<link rel="stylesheet" href="styles.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Zoya, can you give me one chance to fix my mistake?</h1>
+
+<p style="max-width:500px;margin:auto;margin-bottom:20px;">
+Today I made a mistake that I deeply regret. I mentioned the things I've done for you,
+and I realize now that I should never have said that.
+
+A real friend doesn't keep count, and I'm truly sorry for making you feel that way.
+I've been thinking about it the whole day and I feel really bad.
+
+I really really don't want to lose our friendship Zoya.
+Please give me one chance to fix this. I promise I will never ever hurt you like this again.
+</p>
+
+<div class="buttons">
+<button class="yes" onclick="handleYesClick()">I'll give you one chance</button>
+<button class="no" onclick="handleNoClick()">Still upset</button>
+</div>
+
+<div class="gif_container">
+<img src="images/bugcat_capoo.gif">
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
