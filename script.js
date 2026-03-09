@@ -1,21 +1,27 @@
-MIT License
+const msgs = [
+    "Are you sure?",
+    "Are you really sure?",
+    "Are you really really sure?",
+    "Pretty pleaseeeee?",
+    "Pretty pretty pleaseeeee?",
+    "If you say no, I will be very sad...",
+    "I will be very sad...",
+    "I will be very very sad...",
+    "Okay, I'm done...you can go now.",
+    "Just kidding, say yes please! 🩷"
+]
 
-Copyright (c) 2025 Dylan Tran
+let msgIndex = 0;
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+function handleYesClick() {
+    window.location.href = "yes_page.html";
+}
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+function handleNoClick() {
+    const yesButton = document.querySelector(".yes");
+    const noButton = document.querySelector(".no");
+    noButton.textContent = msgs[msgIndex];
+    msgIndex = (msgIndex + 1) % msgs.length;
+    const currentSize = parseFloat(window.getComputedStyle(yesButton).fontSize);
+    yesButton.style.fontSize = `${currentSize * 1.5}px`;
+}
